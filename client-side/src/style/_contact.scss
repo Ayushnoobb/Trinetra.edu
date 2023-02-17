@@ -1,0 +1,153 @@
+
+$color-red: #f86;
+$circle-size: 60px;
+.contact{
+  h1 {
+    margin-bottom: 40px;
+  }
+  
+  label {
+    color: #333;
+  }
+  
+  .btn-send {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    width: 80%;
+    margin-left: 3px;
+    }
+  .help-block.with-errors {
+    color: #ff5050;
+    margin-top: 5px;
+  
+  }
+  
+  .card{
+  margin-left: 10px;
+  margin-right: 10px;
+  }
+}
+.sucess-btn{
+  a{
+    color: #FFFFFf !important;
+  }
+}
+.sucess-btn:hover{
+  background-color: #ffffff !important;
+}
+label{
+  padding-left: 8px;
+}
+
+// error
+.circle,
+.circle-border {
+  width: $circle-size;
+  height: $circle-size;
+  border-radius: 50%;
+}
+
+.circle {
+  z-index: 1;
+  position: relative;
+  background: white;
+  transform: scale(1);
+  animation: success-anim 700ms ease;
+}
+
+.circle-border {
+  z-index: 0;
+  position: absolute;
+  transform: scale(1.1);
+  animation: circle-anim 400ms ease;
+  background: $color-red;	
+}
+
+@keyframes success-anim {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes circle-anim {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.error::before,
+.error::after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: $color-red;
+  position: absolute;
+}
+
+.error::before {
+  width: 40px;
+  top: 48%;
+  left: 16%;
+  transform: rotateZ(50deg);
+}
+
+.error::after {
+  width: 40px;
+  top: 48%;
+  left: 16%;
+  transform: rotateZ(-50deg);
+}
+.error-circle-div{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+
+// verify
+
+.verify{
+  .mobile-text {
+    color: #989696b8;
+    font-size: 15px;
+  }
+  
+  .form-control {
+    margin-right: 12px;
+  }
+  
+  .form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #ff8880;
+    outline: 0;
+    box-shadow: none;
+  }
+  
+  .cursor {
+    cursor: pointer;
+  }
+}
+.verify-card{
+  a{
+    color: #ffffff !important;
+  }
+  .btn{
+    &:hover{
+      background-color: white;
+      border:1px solid blue;
+      color: black !important;
+    }
+  }
+}
