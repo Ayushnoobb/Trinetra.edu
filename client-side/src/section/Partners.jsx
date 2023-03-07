@@ -17,7 +17,7 @@ const Partners = () => {
   return (
     <>
       <section className="partners">
-        <div className="section_wrapper pt-4 container">
+        <div className="section_wrapper p-4 container">
           <div className="partners_wrapper w-100">
             <h5 className="display-4 color-blue mt-5 mb-5">
               Our Partners

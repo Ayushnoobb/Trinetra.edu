@@ -1,102 +1,135 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState ,useRef} from "react";
 import Address from "../section/address";
+import chiran from "../img/team/chiran.jpg";
+import giri from "../img/team/giri.jpg";
+import about from "../img/about.jpg";
+import Partners from "../section/Partners";
+import useIntersection from "./observation";
+import ayush from "../img/team/ayush.jpg";
+import ramesh from "../img/team/ramesh.jpg"
+import anish from "../img/team/anish.jpg"
+import binita from "../img/team/binita.jpg"
 
 const About = () => {
   const [number, setNumber] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (number < 500) {
-        setNumber((prevNumber) => prevNumber + 1);
-      }
-    }, 1);
+  const ref = useRef();
+  const inViewport = useIntersection(ref, '-200px'); 
 
-    return () => clearInterval(interval);
-  }, [number]);
+  useEffect(()=>{
+    document.addEventListener("load",()=>{
+    })
+    if(inViewport){
+      const interval = setInterval(() => {
+        if(number < 500) {
+          setNumber((prevNumber) => prevNumber + 1);
+        }
+      }, 1);
+  
+      return ()=>clearInterval(interval);
+    }
+},[inViewport,number])
+
   return (
     <>
       <section className="about-section">
+        <div className="" style={{ height: "70vh" }} data-aos="fade" data-aos-duration="1000" data-aos-anchor-placement="top-center">
+          <img
+            src={about}
+            alt="About Us"
+            className=" rounded"
+            height={"100%"}
+            width={"100%"}
+            style={{objectFit:"cover",objectPosition:"center",filter:"sepia(0.3)"}}
+          />
+        </div>
         <div className="container">
-          <div className="row mt-5 mb-5">
-            <div className="col-md-6">
-              <h2 className="color-blue display-5">
-                About Trinetra Consultancy
-              </h2>
-              <p>
-                Trinetra Consultancy is a leading education consultancy firm
-                that specializes in helping students pursue their dreams of
-                studying abroad. Our team of expert consultants has years of
-                experience in the field of international education and provides
-                comprehensive support to students throughout the entire process,
-                from selecting the right course and institution to securing
-                admission and obtaining a visa.
-              </p>
-              <p>
-                We are a team of 6 highly qualified and experienced consultants
-                who are passionate about helping students achieve their goals.
-              </p>
-            </div>
-            <div className="col-md-6">
-              <img src="https://via.placeholder.com/600x400" alt="About Us" />
-            </div>
+          <div className="row mt-5 mb-5 px-4">
+            <h2 className=" display-5 w-100 text-center">
+              About Trinetra Consultancy
+            </h2>
+            <p className="mt-4">
+              Trinetra Consultancy is a leading education consultancy firm that
+              specializes in helping students pursue their dreams of studying
+              abroad. Our team of expert consultants has years of experience in
+              the field of international education and provides comprehensive
+              support to students throughout the entire process, from selecting
+              the right course and institution to securing admission and
+              obtaining a visa.
+            </p>
+            <p>
+              We are a team of 8 highly qualified and experienced consultants
+              who are passionate about helping students achieve their goals.
+            </p>
           </div>
           <div className="head w-100">
-            <h2 className="color-blue text-center display-6 mt-4 mb-4">Head Members</h2>
-            <div class="d-flex flex-column">
-              <div class="d-flex flex-column flex-md-row flex-md-row">
-                <div class="p-2">
+            <h2 className=" text-left display-6 mt-4 mb-4 ">Head Members</h2>
+            <div className="d-flex flex-column">
+              <div className="d-flex flex-column flex-md-row flex-md-row" data-aos="fade-up-right" data-aos-duration="1500" data-aos-anchor-placement="top-center">
+                <div
+                  className="p-2"
+                  style={{
+                    width: "",
+                    height: "400px",
+                    borderRadius: "10px",
+                  }}
+                >
                   <img
-                    src="https://via.placeholder.com/600x400"
+                    src={chiran}
                     alt="head members"
-                    class="img-fluid"
+                    className="team-img rounded"
+                    width={400}
+                    height={400}
                   />
                 </div>
-                <div class="p-2">
-                  <h3 className="color-blue">Chiran Adhikari</h3>
-                  <p><em>Your Little Description</em></p>
+                <div className="p-2">
+                  <h3 className="">Chiran Adhikari</h3>
+                  <p className="mb-1">
+                    <em>CEO of Trilochan Consultancy</em>
+                  </p>
+                  <p>Hello I am Chiran , </p>
                 </div>
               </div>
-              <div class="d-flex flex-row-reverse mt-4  align-self-end mb-5">
-                <div class="p-2">
+              <div className="d-flex flex-row-reverse mt-5  align-self-end mb-5" data-aos="fade-up-left" data-aos-duration="1500" data-aos-anchor-placement="top-center">
+                <div
+                  className="p-2"
+                  style={{
+                    width: "",
+                    height: "400px",
+                    borderRadius: "10px",
+                  }}
+                  loading="lazy"
+                >
                   <img
-                    src="https://via.placeholder.com/600x400"
+                    src={giri}
                     alt="head members"
-                    class="img-fluid"
+                    className="team-img rounded"
+                    width={350}
+                    height={400}
                   />
                 </div>
-                <div class="p-2">
-                  <h3 className="color-blue">Your Title</h3>
-                  <p><em>Your Little Description</em></p>
+                <div className="p-2">
+                  <h3 className="">Bhim Bahadur Giri</h3>
+                  <p>
+                    <em>Your Little Description</em>
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-          <h2 className="display-6 color-blue mb-4">Meet Our Team</h2>
-          <div className="row d-flex justify-content-between pr-3 pl-3">
-            <div className="col-md-4">
-              <div className="team-member">
+          <h2 className="display-6  mb-4 text-align-left w-100">
+            Meet Our Team
+          </h2>
+          <div className="row d-flex py-3">
+            <div className="col-md-4" data-aos="fade-down-right" data-aos-duration="1500" data-aos-anchor-placement="top-center">
+              <div className="team-member ">
                 <img
-                  src="https://via.placeholder.com/300x300"
-                  alt="John Smith"
+                  src={ramesh}
+                  alt="Ramesh"
+                  className="rounded img-fluid"
+                  height={400}
                 />
-                <h4 className="mt-3 color-blue">Chhiring Sherpa</h4>
-                <p className="mb-2">
-                  <em>Senior Education Consultant</em>
-                </p>
-                <p>
-                  With over 2 years of experience in the field of international
-                  education, Chhiring is a highly sought-after consultant who
-                  has helped hundreds of students achieve their dreams of
-                  studying abroad. He specializes in providing guidance to
-                  students who are interested in pursuing courses in the
-                  humanities and social sciences.
-                </p>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="team-member">
-                <img src="https://via.placeholder.com/300x300" alt="Jane Doe" />
-                <h4 className="mt-3 color-blue">Ramesh Adhikari</h4>
+                <h4 className="mt-3 ">Ramesh Adhikari</h4>
                 <p className="mb-2">
                   <em>STEM Education Specialist</em>
                 </p>
@@ -109,32 +142,93 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-4" data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-center">
               <div className="team-member">
                 <img
-                  src="https://via.placeholder.com/300x300"
-                  alt="David Lee"
+                  src={anish}
+                  alt="Jane Doe"
+                  className="rounded img-fluid"
                 />
-                <h4 className="mt-3 color-blue">David Lee</h4>
+                <h4 className="mt-3 ">Anish Dulal</h4>
                 <p className="mb-2">
-                  <em>Admissions Specialist</em>
+                  <em>Senior Education Consultant</em>
                 </p>
                 <p>
-                  David has been working in the field of international education
-                  for over 2 years and is known for his exceptional attention to
-                  detail. He specializes in providing guidance to students
-                  throughout the admissions process, from filling out
-                  applications to securing scholarships and financial aid.
+                  Anish is a seasoned education consultant with over 1 years of
+                  experience. He specializes in providing guidance to students
+                  who are interested in pursuing courses in the STEM fields. His
+                  expertise and attention to detail have helped many students
+                  secure admission to top universities around the world.
+                </p>
+              </div>
+            </div>
+            <div className="col-md-4" data-aos="fade-down-left" data-aos-duration="1500" data-aos-anchor-placement="top-center">
+              <div className="team-member">
+                <img
+                  src={binita}
+                  alt="Jane Doe"
+                  className="rounded img-fluid"
+                />
+                <h4 className="mt-3 ">Binita Katuwal</h4>
+                <p className="mb-2">
+                  <em>STEM Education Specialist</em>
+                </p>
+                <p>
+                  Binita is a seasoned education consultant with over 1 years of
+                  experience. He specializes in providing guidance to students
+                  who are interested in pursuing courses in the STEM fields. His
+                  expertise and attention to detail have helped many students
+                  secure admission to top universities around the world.
                 </p>
               </div>
             </div>
           </div>
-          <h2 className="display-6 color-blue mt-5">
-            We have sucessfully send over
-          </h2>
-          <p>{number} Students +</p>
+          <div className="row d-flex  pr-3 pl-3">
+            <div className="col-md-4" data-aos="fade-down-right" data-aos-duration="1500" data-aos-anchor-placement="top-center">
+              <div className="team-member">
+                <img
+                  src="https://via.placeholder.com/300x300"
+                  alt="John Smith"
+                  className="rounded"
+                />
+                <h4 className="mt-3 ">Roza Maharjan</h4>
+                <p className="mb-2">
+                  <em>Senior Education Consultant</em>
+                </p>
+                <p>
+                  Roza with over 2 years of experience in the field of
+                  international education, She is a highly sought-after
+                  consultant who has helped hundreds of students achieve their
+                  dreams of studying abroad. She specializes in providing
+                  guidance to students who are interested in pursuing courses in
+                  the humanities and social sciences.
+                </p>
+              </div>
+            </div>
+            <div className="col-md-4" data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-center">
+              <div className="team-member">
+                <img
+                  src={ayush}
+                  alt="John Smith"
+                  className="img-fluid rounded"
+                />
+                <h4 className="mt-3 ">Ayush Khatri</h4>
+                <p className="mb-2">
+                  <em>Software Engineer</em>
+                </p>
+                <p>
+                    Ayush with over 1 year of exprerience in software development field is our senior IT consultant.
+                    He is very keen to upgrade the Information Technology of Trilochan. When necessary he is also
+                    responsible to give IT suggestion to our students.
+                </p>
+              </div>
+            </div>
+          </div>
+          <h2 className="display-6  mt-5" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">We have sucessfully send over</h2>
+          <p className="increase-num fs-3" style={{color:"rgb(255, 55, 68)"}} data-aos="fade-up" data-aos-duration="1000" ref={ref}>{number} Students +</p>
         </div>
       </section>
+      <Partners />
       <Address />
     </>
   );

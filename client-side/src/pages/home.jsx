@@ -11,6 +11,7 @@ import Subject from "../section/subject";
 import Map from "../section/Map";
 import Partners from "../section/Partners";
 import Address from "../section/address";
+
 const classes = [
 {
   title: "IELTS",
@@ -41,7 +42,7 @@ const classes = [
 function Home() {
   return (
     <>
-      <div className="home_wrapper">
+      <div className="home_wrapper ">
         <div className="swiper_wrapper">
           <Heroswiper />
         </div>
@@ -49,8 +50,8 @@ function Home() {
           <Service />
           <About />
           <Opportunity />
-          <section className="section_preparation w-100">
-            <div className="section_wrapper bg-grey pt-4">
+          <section className="section_preparation w-100  p-4">
+            <div className="section_wrapper">
               <h4 className="display-4 color-blue">Preparation Classes</h4>
               <div className="preparation-wrapper">
                 {

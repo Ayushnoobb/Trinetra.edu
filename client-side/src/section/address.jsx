@@ -13,15 +13,17 @@ function Address() {
       <section className="address">
         <div className="section_wrapper bg-grey w-100">
           <div className="container">
-            <div className="address_wrapper  d-flex w-100 justify-content-evenly flex-column-reverse align-items-center ">
+            <div className="address_wrapper  d-flex w-100 justify-content-evenly flex-column-reverse align-items-center p-5">
               <div className="address_col mb-4">
                 <div className="address_row">
                   <div className="address_icon">
                     <FontAwesomeIcon icon={faPhone} />
                   </div>
                   <div className="address_desc d-flex">
-                    <p>9745719068</p>
-                    <p>9700055550</p>
+                    <p>9851332907</p>
+                    <p>9851341296</p>
+                    <p>9848505571</p>
+                    <p></p>
                   </div>
                 </div>
                 {/* 2 */}
@@ -30,7 +32,7 @@ function Address() {
                     <FontAwesomeIcon icon={faEnvelope} />
                   </div>
                   <div className="address_desc">
-                    <p>tinetra269@gmail.com</p>
+                    <p>trilochan.consultancy3@gmail.com</p>
                   </div>
                 </div>
                 {/* 3 */}
@@ -39,7 +41,7 @@ function Address() {
                     <FontAwesomeIcon icon={faLocation} />
                   </div>
                   <div className="address_desc">
-                    <p>Naxal , Kathmandu</p>
+                    <p>Nagpokahri , Naxal , Kathmandu</p>
                   </div>
                 </div>
               </div>
@@ -47,8 +49,8 @@ function Address() {
                 <h4 className="display-7   mb-0">Follow Us</h4>
                 <div className="address_col mt-4 w-50 mb-2">
                   <div className="address_row">
-                    <div className="icon_div">
-                      <a href="#">
+                    <div className="icon_div" name="facebook-logo">
+                      <a href="https://www.facebook.com/profile.php?id=100090400011448" target={"_blank"}>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                           <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 
                           37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84

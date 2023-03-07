@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Address from "../section/address";
+import Button from "../component/button"; 
 
 const Contact = () => {
   useEffect(() => {
@@ -9,7 +10,7 @@ const Contact = () => {
   }, []);
   return (
     <>
-      <div className="row w-50 mb-1" style={{margin:"0 auto"}}>
+      <div className="row w-50 mb-1 p-4" style={{margin:"0 auto"}} data-aos="fade-up" data-aos-duration="1500">
         <div className="col-lg-7 mx-auto mt-4 mb-4">
           <div className="card mt-2 mx-auto p-4 bg-light">
             <div className="card-body bg-light">
@@ -93,11 +94,7 @@ const Contact = () => {
                       </div>
 
                       <div className="col-md-12 mt-4">
-                        <button
-                          type="submit"
-                          className="custom-btn btn-3
-                            "
-                        ><span>Send Message</span></button>
+                        <Button type="submit" name="send message"/>
                       </div>
                     </div>
                   </div>

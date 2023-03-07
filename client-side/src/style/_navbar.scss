@@ -1,3 +1,6 @@
+#nav{
+  background-color: #fff !important;
+}
 .nav{
   &_wrapper{
     width: 100%;
@@ -6,9 +9,9 @@
     justify-content: space-between;
     padding: 10px 20px;
     align-items: center;
-    border-radius:0 0 15px 15px ;
+    // border-radius:0 0 15px 15px ;
     transition-duration: 5s;
-    background-color: #f5f5f5;
+    background-color: #fff;
   }
   &-left{
     max-height: 60px;
@@ -26,6 +29,7 @@
   &-lefter{
     display:flex ;
     align-items: center;
+    justify-content: center;
   }
 }
  a:not(.nav-apply){
@@ -39,7 +43,9 @@
   color: center;
   &:hover:not(.nav-apply){
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 9%, rgba(0,212,255,1) 51%);
+    background: linear-gradient(to right, rgb(255, 8, 68) 0%, rgb(255, 177, 153) 100%);
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke: #000000;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -63,7 +69,9 @@
 }
 .btn-3 {
   background: rgb(0,172,238);
-background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+  background: linear-gradient(to right, rgb(255, 8, 68) 0%, rgb(255, 177, 153) 100%);
+  -webkit-text-stroke: #000000;
+  // color: #ddd;
   width: 130px;
   height: 40px;
   line-height: 42px;
@@ -140,10 +148,10 @@ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
 }
 .active{
   position: relative;
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 9%, rgba(0,212,255,1) 51%);
+  background: linear-gradient(to right, rgb(255, 8, 68) 0%, rgb(255, 177, 153) 100%);
+  -webkit-text-stroke: #000000;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  // color: ;
   &::before{
     position: absolute;
     content: "";
@@ -167,15 +175,16 @@ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
 }
 .nav-lefter{
   display: flex;
-  gap: 10px;
   font-size: 18px;
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 9%, rgba(0,212,255,1) 51%);
+  background: linear-gradient(to right, rgb(255, 8, 68) 0%, rgb(255, 177, 153) 100%);
+  -webkit-text-stroke: #000000;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   &:hover{
-  background: linear-gradient(-90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 9%, rgba(0,212,255,1) 51%);
+  background: linear-gradient(-90deg, rgb(255, 177, 153) 0%, rgb(255, 8, 68) 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  cursor: default;
   }
 }
 .fixed{
@@ -186,7 +195,7 @@ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
   width: 70% !important;
   z-index: 99;
   border-radius:  0 0 15px 15px;
-  box-shadow: 6px 10px 2px 1px rgba(0, 0, 0, .5);
+  box-shadow: 3px 5px 2px 1px rgba(0, 0, 0, .2);
   animation: brighten 0.5s  ease-in-out ;
 }
 @keyframes brighten {
@@ -199,4 +208,7 @@ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
 }
 #nav{
   width: 100%;
+}
+h2{
+  margin: 0 !important;
 }

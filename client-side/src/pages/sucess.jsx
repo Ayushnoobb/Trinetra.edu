@@ -39,7 +39,7 @@ function SucessMsg() {
               <div className="icon-fix"></div>
             </div>
           </div>
-          <div className="btn btn-primary sucess-btn">
+          <div className="btn background-gradient sucess-btn">
             <Link to="/contact">Go to Contact</Link>
           </div>
         </Popup>

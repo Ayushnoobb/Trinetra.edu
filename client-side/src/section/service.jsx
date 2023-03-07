@@ -6,8 +6,8 @@ import writing from "../img/card/writing.jpg";
 function Service() {
   return (
     <>
-      <section className="services bg-grey">
-        <div className="card_holder">
+      <section className="services ">
+        <div className="card_holder p-4">
           {/* card-1 */}
           <div className="card ">
             <div className="card_img">

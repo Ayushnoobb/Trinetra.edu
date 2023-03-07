@@ -13,7 +13,6 @@ const transporter = nodemailer.createTransport({
 })
 
 let mailMessage , oTp;
-
 app.post("/message" , (req, res) =>{
   mailMessage = req.body;
   sendOTP(mailMessage);
@@ -66,4 +65,4 @@ function sendOTP(mailMessage){
   })
 }
 
-app.listen(3001)
+app.listen(3009)
