@@ -5,7 +5,7 @@ import giri from "../img/team/giri.jpg";
 import about from "../img/about.jpg";
 import Partners from "../section/Partners";
 import useIntersection from "./observation";
-import ayush from "../img/team/ayush.jpg";
+// import ayush from "../img/team/ayush.jpg";
 import ramesh from "../img/team/ramesh.jpg"
 import anish from "../img/team/anish.jpg"
 import binita from "../img/team/binita.jpg"
@@ -205,7 +205,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="col-md-4" data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-center">
+            {/* <div className="col-md-4" data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-center">
               <div className="team-member">
                 <img
                   src={ayush}
@@ -222,7 +222,7 @@ const About = () => {
                     responsible to give IT suggestion to our students.
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
           <h2 className="display-6  mt-5" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100">We have sucessfully send over</h2>
           <p className="increase-num fs-3" style={{color:"rgb(255, 55, 68)"}} data-aos="fade-up" data-aos-duration="1000" ref={ref}>{number} Students +</p>
