@@ -1,0 +1,8 @@
+{
+  "rewrites":[
+    {
+      "source":"/server-side/(.*)",
+      "destination":"/server-side"
+    }
+  ]
+}

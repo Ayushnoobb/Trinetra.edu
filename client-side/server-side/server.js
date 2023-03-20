@@ -4,10 +4,12 @@ app.use(express.urlencoded({extended:false}));
 require("dotenv").config();
 
 app.get("/",(req,res)=>{
-  res.redirect("/");
+  app.use(express.static((path.resolve(__dirname,"client","build"))))
+  res.redirect(path.resolve(__dirname,"client","build","index.html"));
 })
 
 const nodemailer = require("nodemailer");
+const path = require("path");
 const transporter = nodemailer.createTransport({
   service:"gmail",
   auth:{
@@ -69,4 +71,5 @@ function sendOTP(mailMessage){
   })
 }
 
-app.listen(3009)
+app.listen(3009);
+module.exports =app
