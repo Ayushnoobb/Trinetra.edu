@@ -3,6 +3,10 @@ const app = express();
 app.use(express.urlencoded({extended:false}));
 require("dotenv").config();
 
+app.get("/",(req,res)=>{
+  res.redirect("/");
+})
+
 const nodemailer = require("nodemailer");
 const transporter = nodemailer.createTransport({
   service:"gmail",
