@@ -10,12 +10,10 @@ import Navbar from "./component/navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Sucess from "./pages/sucess";
 import Verification from "./pages/verification";
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 import FAQ from "./pages/faq";
+import NotFound from "./pages/404";
 
 function AppRouter() {
-  AOS.init()
   return (
     <>
       <Router>
@@ -29,6 +27,7 @@ function AppRouter() {
             <Route path="/message/error" element={<Error />}></Route>
             <Route path="/message/sucess" element={<Sucess />}></Route>
             <Route path="/message/verify" element={<Verification />}></Route>
+            <Route path="/*" element={<NotFound />}></Route>
           </Routes>
         </main>
       </Router>

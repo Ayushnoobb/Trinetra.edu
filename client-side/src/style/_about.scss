@@ -179,7 +179,7 @@
     padding-bottom: 10px;
     // padding: 0 30px;
     &>img{
-        height: 400px;
+        height: 350px;
         width:100%;
         object-fit: cover;
         object-position: center;
@@ -194,5 +194,11 @@
     }
     &>h4,p{
         padding: 0 20px;
+    }
+}
+.p-2{
+    &>img{
+        width: 350px;
+        // height: 350px;
     }
 }

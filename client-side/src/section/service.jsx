@@ -2,15 +2,18 @@ import React from "react";
 import talk from "../img/card/talk.jpeg";
 import prepare from "../img/card/prepare.jpeg";
 import writing from "../img/card/writing.jpg";
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 function Service() {
+  AOS.init()
   return (
     <>
       <section className="services ">
-        <div className="card_holder p-4">
+        <div className="card_holder p-4 flex-column flex-md-row">
           {/* card-1 */}
-          <div className="card ">
-            <div className="card_img">
+          <div className="card " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-center">
+            <div className="card_img ">
               <img
                 className="card-img-top img-fluid"
                 src={writing}
@@ -27,7 +30,7 @@ function Service() {
             </div>
           </div>
           {/* card-2 */}
-          <div className="card ">
+          <div className="card " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-center">
             <div className="card_img">
               <img
                 className="card-img-top img-fluid"
@@ -45,7 +48,7 @@ function Service() {
             </div>
           </div>
           {/* card-3 */}
-          <div className="card ">
+          <div className="card " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-center">
             <div className="card_img">
               <img
                 className="card-img-top img-fluid"

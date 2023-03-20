@@ -30,6 +30,7 @@ section{
 }
 .card_holder{
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   .card {
     width: calc((100% / 3) - 20px);
@@ -61,6 +62,21 @@ section{
     box-shadow: 0 3px 10px rgba(0 0 0/ 0.3);
     transform: translate(0, -5px);
 }
+@media (max-width:768px) {
+  .card_holder{
+    flex-direction: column !important;
+  }
+  .card{
+    width: 100%;
+  }
+}
+
+@media (max-width:768px) {
+  .heading{
+    font-size: 18px !important;
+  }
+}
+
 }
 h4{
   color: #000 !important;
@@ -302,6 +318,14 @@ h2{
         margin-right: 10px;
       }
     }
+  }
+}
+.mr-2{
+  margin-right:0.5rem
+}
+.address_desc:nth-of-type(0){
+  &>p{
+    margin-right: 10px;
   }
 }
 .icon_div{

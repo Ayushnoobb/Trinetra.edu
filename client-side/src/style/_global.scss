@@ -15,6 +15,9 @@ $roboto: 'Roboto', serif;
 *{
   font-family: $roboto;
 }
+body{
+  overflow-x: hidden;
+}
 .img-fluid{
   max-width: 100%;
   height: auto;
@@ -23,6 +26,8 @@ $roboto: 'Roboto', serif;
   display: flex;
   flex-direction: column;
   position: relative;
+  justify-content: space-between;
+  min-height: 100vh;
   
 }
 li{

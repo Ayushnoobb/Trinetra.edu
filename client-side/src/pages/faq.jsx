@@ -5,11 +5,16 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 function FAQ() {
-  AOS.init()
+  AOS.init({
+    disable:()=>{
+      var maxWidth = 768;
+      return maxWidth <= window.innerWidth
+    }
+  })
   return (
     <>
       <div className="container">
-        <h2 className="display-4 mt-5 px-4">For Additional Query <span className="display-1 bounce">?</span></h2>
+        <h2 className="display-4 mt-5 px-4">For <br className="d-md-none" />Additional Query <span className="display-1 bounce">?</span></h2>
 
         <Accordion defaultActiveKey="0" className="px-4">
           <Accordion.Item eventKey="0" data-aos="fade-up" data-aos-duration="2000">

@@ -8,14 +8,11 @@ const Navbar = () => {
   let location = useLocation();
   useEffect(() => {
     const nav = document.querySelector("#nav");
-    // const navWrap = document.querySelector(".nav_wrap");
     window.addEventListener("scroll", () => {
       if (window.scrollY > 400) {
         nav.classList.add("fixed");
-        // navWrap.style.backgroundColor = "transparent";
       } else {
         nav.classList.remove("fixed");
-        // navWrap.style.backgroundColor = "#f5f5f5";
       }
     });
     if (location.pathname === "/"){
@@ -50,7 +47,7 @@ const Navbar = () => {
                 </Link>
                 <h2 className="heading">Trilochan Educational Service</h2>
               </div>
-              <div className="nav-right">
+              <div className="nav-right d-none d-md-flex">
                 <Link to={"/"} className={active===0 ? "nav-link active" : "nav-link"} onClick={()=>{setActive(0);}}>
                   Home
                 </Link>

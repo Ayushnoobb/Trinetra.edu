@@ -42,9 +42,8 @@ a:not(.nav-apply) {
   transition: 0.5s;
   display: block;
   padding: 0 7px;
-  color: center;
 }
-a:not(.nav-apply):hover:not(.nav-apply) {
+a:not(.nav-apply):hover:not(.nav-apply, .custom-btn) {
   background: rgb(2, 0, 36);
   background: linear-gradient(to right, rgb(255, 8, 68) 0%, rgb(255, 177, 153) 100%);
   -webkit-text-stroke: #000000;
@@ -69,16 +68,22 @@ a:not(.nav-apply):hover:not(.nav-apply) {
   box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
 }
+.custom-btn:hover > span {
+  color: #000000;
+}
 
 .btn-3 {
   background: rgb(0, 172, 238);
   background: linear-gradient(to right, rgb(255, 8, 68) 0%, rgb(255, 177, 153) 100%);
-  -webkit-text-stroke: #000000;
   width: 130px;
   height: 40px;
   line-height: 42px;
   padding: 0;
   border: none;
+  z-index: 99;
+}
+.btn-3:hover {
+  color: #000000 !important;
 }
 
 .btn-3 span {
@@ -87,6 +92,7 @@ a:not(.nav-apply):hover:not(.nav-apply) {
   width: 100%;
   font-size: 16px;
   height: 100%;
+  z-index: 99;
 }
 
 .btn-3:before,
@@ -95,7 +101,7 @@ a:not(.nav-apply):hover:not(.nav-apply) {
   content: "";
   right: 0;
   top: 0;
-  background: rgb(2, 126, 251);
+  background: rgb(255, 177, 153);
   transition: all 0.3s ease;
 }
 
@@ -123,7 +129,7 @@ a:not(.nav-apply):hover:not(.nav-apply) {
 }
 
 .btn-3 span:hover {
-  color: rgb(2, 126, 251);
+  color: rgb(255, 8, 68);
 }
 
 .btn-3 span:before,
@@ -132,7 +138,7 @@ a:not(.nav-apply):hover:not(.nav-apply) {
   content: "";
   left: 0;
   bottom: 0;
-  background: rgb(2, 126, 251);
+  background: rgb(255, 8, 68);
   transition: all 0.3s ease;
 }
 
@@ -232,6 +238,11 @@ h2 {
   margin: 0 !important;
 }
 
+@media (max-width: 768px) {
+  .heading {
+    font-size: 18px !important;
+  }
+}
 .container {
   max-width: 1340px;
   width: 100%;
@@ -248,6 +259,10 @@ h2 {
   font-family: "Roboto", serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -257,6 +272,8 @@ h2 {
   display: flex;
   flex-direction: column;
   position: relative;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 li {
@@ -340,6 +357,7 @@ section {
 
 .card_holder {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 .card_holder .card {
@@ -369,6 +387,19 @@ section {
 .card_holder .card:hover {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
   transform: translate(0, -5px);
+}
+@media (max-width: 768px) {
+  .card_holder .card_holder {
+    flex-direction: column !important;
+  }
+  .card_holder .card {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .card_holder .heading {
+    font-size: 18px !important;
+  }
 }
 
 h4 {
@@ -592,6 +623,14 @@ h2 {
   margin-right: 10px;
 }
 
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.address_desc:nth-of-type(0) > p {
+  margin-right: 10px;
+}
+
 .icon_div {
   width: 50px;
 }
@@ -736,6 +775,19 @@ label {
   background-color: white;
   border: 1px solid blue;
   color: black !important;
+}
+
+.not-found {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  color: red;
+}
+.not-found > div:first-of-type > div:first-child {
+  border-right: 4px solid red;
+  padding-right: 15px;
 }
 
 .popup-p {
@@ -906,7 +958,7 @@ label {
   padding-bottom: 10px;
 }
 .team-member > img {
-  height: 400px;
+  height: 350px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -922,6 +974,10 @@ label {
 }
 .team-member > h4, .team-member p {
   padding: 0 20px;
+}
+
+.p-2 > img {
+  width: 350px;
 }
 
 .accordion {

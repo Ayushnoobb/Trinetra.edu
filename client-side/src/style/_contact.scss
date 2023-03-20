@@ -151,3 +151,19 @@ label{
     }
   }
 }
+// Not found
+.not-found{
+  margin: 0 auto;
+  // height: 83.8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  color: red;
+  &>div:first-of-type{
+    &>div:first-child{
+      border-right: 4px solid red;
+      padding-right: 15px;
+    }
+  }
+}

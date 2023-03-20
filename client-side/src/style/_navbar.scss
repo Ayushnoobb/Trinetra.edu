@@ -40,8 +40,8 @@
   transition: 0.5s;
   display: block;
   padding: 0 7px;
-  color: center;
-  &:hover:not(.nav-apply){
+  // color: center;
+  &:hover:not(.nav-apply , .custom-btn){
     background: rgb(2,0,36);
     background: linear-gradient(to right, rgb(255, 8, 68) 0%, rgb(255, 177, 153) 100%);
     -webkit-text-stroke: #000000;
@@ -66,17 +66,28 @@
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
   outline: none;
+  &:hover{
+    &>span{
+      color: #000000;
+    }
+  }
 }
 .btn-3 {
   background: rgb(0,172,238);
   background: linear-gradient(to right, rgb(255, 8, 68) 0%, rgb(255, 177, 153) 100%);
-  -webkit-text-stroke: #000000;
+  // -webkit-text-stroke: #000000;
   // color: #ddd;
   width: 130px;
   height: 40px;
   line-height: 42px;
   padding: 0;
   border: none;
+  z-index: 99;
+
+  &:hover{
+    color: #000000 !important;
+  }
+
   
 }
 .btn-3 span {
@@ -85,7 +96,7 @@
   width: 100%;
   font-size: 16px;
   height: 100%;
-  // z-index: 99;
+  z-index: 99;
 }
 .btn-3:before,
 .btn-3:after {
@@ -93,7 +104,7 @@
   content: "";
   right: 0;
   top: 0;
-   background: rgba(2,126,251,1);
+   background: rgb(255, 177, 153);
   transition: all 0.3s ease;
 }
 .btn-3:before {
@@ -115,7 +126,7 @@
   width: 100%;
 }
 .btn-3 span:hover{
-   color: rgba(2,126,251,1);
+   color: rgb(255, 8, 68);
   //  z-index: 99;
 }
 .btn-3 span:before,
@@ -124,7 +135,7 @@
   content: "";
   left: 0;
   bottom: 0;
-   background: rgba(2,126,251,1);
+   background: rgb(255, 8, 68);
   transition: all 0.3s ease;
 }
 .btn-3 span:before {
@@ -211,4 +222,10 @@
 }
 h2{
   margin: 0 !important;
+}
+
+@media (max-width:768px) {
+  .heading{
+    font-size: 18px !important;
+  }
 }
