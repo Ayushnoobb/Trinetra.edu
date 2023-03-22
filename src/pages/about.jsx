@@ -5,7 +5,7 @@ import giri from "../img/team/giri.jpg";
 import about from "../img/about.jpg";
 import Partners from "../section/Partners";
 import useIntersection from "./observation";
-// import ayush from "../img/team/ayush.jpg";
+import ayush from "../img/team/ayush.jpg";
 import ramesh from "../img/team/ramesh.jpg"
 import anish from "../img/team/anish.jpg"
 import binita from "../img/team/binita.jpg"
