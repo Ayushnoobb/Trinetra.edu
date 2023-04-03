@@ -2,67 +2,84 @@ import React from "react";
 import talk from "../img/card/talk.jpeg";
 import prepare from "../img/card/prepare.jpeg";
 import writing from "../img/card/writing.jpg";
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Service() {
-  AOS.init()
+  AOS.init();
   return (
     <>
       <section className="services ">
-        <div className="card_holder p-4 flex-column flex-md-row">
-          {/* card-1 */}
-          <div className="card " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-center">
-            <div className="card_img ">
-              <img
-                className="card-img-top img-fluid"
-                src={writing}
-                alt="Cardcap"
-                height={200}
-              />
+        <div className="container">
+          <div className="card_holder p-4 flex-column flex-md-row">
+            {/* card-1 */}
+            <div
+              className="card "
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-anchor-placement="top-center"
+            >
+              <div className="card_img ">
+                <img
+                  className="card-img-top img-fluid"
+                  src={writing}
+                  alt="Cardcap"
+                  height={200}
+                />
+              </div>
+              <div className="card-body">
+                <h5 className="card-title">Study Abroad</h5>
+                <p className="card-text">
+                  We help you study , work and live in leading destinations
+                  around the world
+                </p>
+              </div>
             </div>
-            <div className="card-body">
-              <h5 className="card-title">Study Abroad</h5>
-              <p className="card-text">
-                We help you study , work and live in leading destinations around
-                the world
-              </p>
+            {/* card-2 */}
+            <div
+              className="card "
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-anchor-placement="top-center"
+            >
+              <div className="card_img">
+                <img
+                  className="card-img-top img-fluid"
+                  src={prepare}
+                  alt="Cardcap"
+                  height={200}
+                />
+              </div>
+              <div className="card-body">
+                <h5 className="card-title">Preparation Class</h5>
+                <p className="card-text">
+                  We help you to prepare IELTS & SAT with the best possible
+                  instructors available
+                </p>
+              </div>
             </div>
-          </div>
-          {/* card-2 */}
-          <div className="card " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-center">
-            <div className="card_img">
-              <img
-                className="card-img-top img-fluid"
-                src={prepare}
-                alt="Cardcap"
-                height={200}
-              />
-            </div>
-            <div className="card-body">
-              <h5 className="card-title">Preparation Class</h5>
-              <p className="card-text">
-                We help you to prepare IELTS & SAT with the best possible
-                instructors available
-              </p>
-            </div>
-          </div>
-          {/* card-3 */}
-          <div className="card " data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-center">
-            <div className="card_img">
-              <img
-                className="card-img-top img-fluid"
-                src={talk}
-                alt="Cardcap"
-                height={200}
-              />
-            </div>
-            <div className="card-body">
-              <h5 className="card-title">Let's Talk</h5>
-              <p className="card-text">
-                Contact us foer study abroad counselling , visa assistance and
-                many more
-              </p>
+            {/* card-3 */}
+            <div
+              className="card "
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-anchor-placement="top-center"
+            >
+              <div className="card_img">
+                <img
+                  className="card-img-top img-fluid"
+                  src={talk}
+                  alt="Cardcap"
+                  height={200}
+                />
+              </div>
+              <div className="card-body">
+                <h5 className="card-title">Let's Talk</h5>
+                <p className="card-text">
+                  Contact us foer study abroad counselling , visa assistance and
+                  many more
+                </p>
+              </div>
             </div>
           </div>
         </div>

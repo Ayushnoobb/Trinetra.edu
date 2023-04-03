@@ -1,5 +1,5 @@
 section:not(.address) {
-  margin-bottom: 3rem;
+  padding-bottom: 3rem;
 }
 section{
   border-radius: 20px;
@@ -27,6 +27,20 @@ section{
 // Section Service
 .services{
   padding: 3rem 15px;
+  margin-bottom: -1px;
+    position: relative;
+  
+    &::after{
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      clip-path: polygon(0 0, 0% 100%, 100% 100%);
+      width: 50%;
+      height: 100%;
+      background-color: #b8fff2;
+      z-index: -1;
+    }
 }
 .card_holder{
   display: flex;
@@ -36,6 +50,8 @@ section{
     width: calc((100% / 3) - 20px);
     transition: 0.5s;
     padding-bottom: 20px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    // background-color: transparent;
     &-body {
       & > h5 {
         color:rgb(255, 8, 68);
@@ -59,7 +75,6 @@ section{
     }
   }
   .card:hover {
-    box-shadow: 0 3px 10px rgba(0 0 0/ 0.3);
     transform: translate(0, -5px);
 }
 @media (max-width:768px) {
@@ -78,13 +93,39 @@ section{
 }
 
 }
-h4{
-  color: #000 !important;
+h4 :not(.display-7){
+  color: rgb(255, 55, 68) !important;
+  font-size: 2.5rem !important;
+}
+h5:not(.subject-title)
+{
+  // color: rgb(255, 55, 68) !important;
+  font-size: 2.5rem !important;
 }
 
 // Section About
+.wrap__about{
+  position: inherit;
+  z-index: 1;
+}
 .section {
   &-about {
+    background-color: #b8fff2;
+    padding: 3rem 2rem;
+    border-radius: 0;
+    position: relative;
+    // margin-bottom: -5px;
+
+    &::after{
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      clip-path: polygon(0 0, 0% 100%, 100% 100%);
+      background-color: #ffffff;
+      width: 50%;
+      height: 100%;
+    }
     &-left {
       margin-right: 20px;
       padding-left: 15px;
@@ -122,6 +163,35 @@ h4{
 }
 
 // Opportunity
+.section_opportunity{
+  position: relative;
+
+  &::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #b8fff2;
+    // opacity: 0.6;
+    z-index: -1;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  }
+
+  &::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #b8fff2;
+    // opacity: 0.6;
+    z-index: -1;
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+  }
+}
 .opportunity-list {
   display: flex;
   flex-wrap: wrap;
@@ -159,22 +229,42 @@ h4{
   color: rgb(255, 8, 68) !important;
 }
 // Section preparation
+.section_preparation{
+  // background-color: #b8fff2;
+  border-radius: 0;
+  margin-top: -1px;
+  // opacity: 0.6;
+  padding: 3rem 0;
+  position: relative;
+
+  &::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);;
+    width: 100%;
+    height: 100%;
+    background-color: #b8fff2;
+    z-index: -1;
+  }
+}
 .preparation {
   &-type {
     display: flex;
     gap: 25px;
     padding: 0 30px;
     border-radius: 10px;
-    background-color: #ffffff;
     transition: 0.5s;
-    &:hover {
-      box-shadow:0 3px  10px rgba(0 0 0/ 0.3);
-    }
+    border: 1px solid red;
+    box-shadow:0 3px  10px rgba(0 0 0/ 0.3);
+
   }
   &-left {
     flex: 1 1 auto;
     width: 400px;
     padding: 20px 0;
+    background-color: #ffffff;
   }
   &-right {
     flex: 2 1 auto;
@@ -184,6 +274,7 @@ h4{
     text-align: left;
     justify-content: center;
     padding-left: 10px;
+    background-color: transparent !important;
   }
   &-wrapper {
     display: flex;
@@ -195,9 +286,7 @@ h4{
 .background-gradient{
   background: linear-gradient(to top, rgb(255, 8, 68) 0%, rgb(255, 177, 153) 100%);
 }
-h2{
-  color:rgb(255, 55, 68);
-}
+
 .preparation-img {
   max-width: 300px;
   height: 200px;
@@ -207,9 +296,7 @@ h2{
   position: relative;
   width: fit-content;
   margin-left: 15px;
-  color: rgb(255, 55, 68) !important;
   width: 100%;
-  // background: linear-gradient(to top, rgb(255, 8, 68) 0%, rgb(255, 177, 153) 100%);
 
 }
 .display-5 {
@@ -218,12 +305,29 @@ h2{
 
 
 // Subjects
+.subject{
+  position: relative;
+  color: #454545 !important;
+
+  &::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    width: 100%;
+    height: 100%;
+    background-color: #b8fff2;
+    z-index: -1;
+  }
+}
 .subjects {
   width: calc(100% / 4);
   display: flex;
   flex-direction: column;
   row-gap: 20px;
   align-items: center;
+  color: #454545 !important;
   &_wrapper {
     padding: 0 15px;
     display: flex;
@@ -237,7 +341,8 @@ h2{
     height: 150px;
     transition: 0.5s;
     padding: 0 10px;
-    background: linear-gradient(to right, rgb(255, 8, 68) 0%, rgb(255, 177, 153) 100%);
+    // background: linear-gradient(to right, rgb(255, 8, 68) 0%, rgb(255, 177, 153) 100%);
+    border: 1px solid red;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -245,7 +350,7 @@ h2{
       width: 75%;
       height: 100px;
       & > path {
-        fill: #f4f4d5;
+        fill: #454545;
       }
     }
   }
@@ -253,6 +358,11 @@ h2{
 .subjects:hover {
   .subjects-icon {
     box-shadow: 0 10px  10px rgba(0 0 0 / 0.3);
+  }
+}
+.subjects_wrapper:hover{
+  .subjects-icon:not(:hover){
+    filter: blur(5px);
   }
 }
 

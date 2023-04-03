@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../img/tinetra.png";
+// import head from "../img/headlogo.svg"
 import Button from "./button";
 
 const Navbar = () => {
@@ -35,7 +36,7 @@ const Navbar = () => {
     <>
       <nav id="nav">
         <div className="nav_wrap" >
-          <div className="container">
+          <div className="">
             <div className="nav_wrapper">
               <div className="nav-lefter">
                 <Link to={"/"} className="nav-lft-wrapper">

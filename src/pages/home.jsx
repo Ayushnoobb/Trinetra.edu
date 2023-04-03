@@ -46,13 +46,13 @@ function Home() {
         <div className="swiper_wrapper">
           <Heroswiper />
         </div>
-        <div className="container">
+        <div className="">
           <Service />
           <About />
           <Opportunity />
-          <section className="section_preparation w-100  p-4">
-            <div className="section_wrapper">
-              <h4 className="display-4 color-blue">Preparation Classes</h4>
+          <section className="section_preparation w-100 ">
+            <div className="section_wrapper container">
+              <h4 className="display-4">Preparation Classes</h4>
               <div className="preparation-wrapper">
                 {
                   classes.map((classs) => {

@@ -19,9 +19,9 @@ const Partners = () => {
       <section className="partners">
         <div className="section_wrapper p-4 container">
           <div className="partners_wrapper w-100">
-            <h5 className="display-4 color-blue mt-5 mb-5">
+            <h4 className="display-4  mt-5 mb-5">
               Our Partners
-            </h5>
+            </h4>
             <Swiper
               effect={"flip"}
               spaceBetween={30}
