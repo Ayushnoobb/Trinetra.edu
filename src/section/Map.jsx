@@ -6,7 +6,7 @@ const Map = () => {
   AOS.init();
   return (
     <div
-      className="map-holder"
+      className="map-holder my-5"
       data-aos="fade"
       data-aos-duration="1500"
       data-aos-delay="300"

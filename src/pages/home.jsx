@@ -61,14 +61,14 @@ function Home() {
           snap: 1 / (panels.length - 1),
           end: () => "+=" + slider.current.offsetWidth,
           // markers: true
-        }
+        },
       });
       tl.to(
         panels,
         {
           xPercent: -100 * (panels.length - 1),
           duration: 1,
-          ease: "none"
+          ease: "none",
         },
         pauseRatio
       );
@@ -82,6 +82,23 @@ function Home() {
       <div className="home_wrapper">
         <div className="swiper_wrapper firstContainer">
           <Heroswiper />
+          <div class="flex-grow-1 ms-4 ps-3">
+            <figure>
+              <blockquote class="blockquote mb-4">
+                <p>
+                  <i class="fas fa-quote-left fa-lg text-warning me-2"></i>
+                  <span class="font-italic">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Pariatur sint nesciunt ad itaque aperiam expedita officiis
+                    incidunt minus facere, molestias quisquam impedit inventore.
+                  </span>
+                </p>
+              </blockquote>
+              <figcaption class="blockquote-footer">
+                Miranda Smith in <cite title="Source Title">The Guardian</cite>
+              </figcaption>
+            </figure>
+          </div>
         </div>
         <div className="content" ref={slider}>
           <section className="services panel">
@@ -116,8 +133,3 @@ function Home() {
 }
 
 export default Home;
-
-
-
-
-
