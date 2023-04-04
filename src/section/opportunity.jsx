@@ -12,7 +12,6 @@ function Opportunity() {
   AOS.init();
   return (
     <>
-      <section className="section_opportunity p-4 ">
         <div className="container">
           <div className="media-container-row">
             <div className="title ">
@@ -127,7 +126,6 @@ function Opportunity() {
             </div>
           </div>
         </div>
-      </section>
     </>
   );
 }

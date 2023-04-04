@@ -6,11 +6,11 @@ import "aos/dist/aos.css";
 import Button from "../component/button";
 import { Link } from "react-router-dom";
 
+
 function About() {
   AOS.init();
   return (
     <>
-      <section className="section-about ">
         <div className="wrap__about">
           <div className="container">
             <div className="justify-content-between  d-flex flex-column flex-md-row  p-4">
@@ -69,7 +69,6 @@ function About() {
             </div>
           </div>
         </div>
-      </section>
     </>
   );
 }

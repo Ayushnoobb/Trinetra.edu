@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+nav {
+  background-color: #b8fff2;
+}
+
 .nav_wrapper {
   width: 100%;
   height: 100px;
@@ -8,10 +12,11 @@
   align-items: center;
   transition-duration: 5s;
   background-color: #FFFfff;
+  background-color: #b8fff2;
 }
 .nav-left {
-  max-height: 60px;
-  max-width: 50px;
+  max-height: 90px;
+  max-width: 90px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -235,11 +240,17 @@ h2 {
 
 body {
   overflow-x: hidden;
+  position: relative;
 }
 
 .img-fluid {
   max-width: 100%;
   height: auto;
+}
+
+.panel {
+  height: 100vh;
+  width: 100vw !important;
 }
 
 #root {
@@ -295,6 +306,19 @@ html {
 
 .bg-gradients {
   background: linear-gradient(to top, rgb(255, 8, 68) 0%, rgb(255, 177, 153) 100%);
+}
+
+section:not(.address, .partners, .about-section) {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  width: 400vw;
+  display: flex;
+  flex-direction: row;
 }
 
 section:not(.address) {
@@ -395,7 +419,7 @@ h4 :not(.display-7) {
   font-size: 2.5rem !important;
 }
 
-h5:not(.subject-title) {
+h5:not(.subject-title, .card-title) {
   font-size: 2.5rem !important;
 }
 

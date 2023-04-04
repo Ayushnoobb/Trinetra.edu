@@ -17,10 +17,15 @@ $roboto: 'Roboto', serif;
 }
 body{
   overflow-x: hidden;
+  position: relative;
 }
 .img-fluid{
   max-width: 100%;
   height: auto;
+}
+.panel{
+  height: 100vh;
+  width: 100vw !important;
 }
 #root{
   display: flex;
@@ -69,4 +74,16 @@ html{
 }
 .bg-gradients{
   background: linear-gradient(to top, rgb(255, 8, 68) 0%, rgb(255, 177, 153) 100%);
+}
+section:not(.address , .partners , .about-section ){
+  // min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content{
+  width: 400vw;
+  display: flex;
+  flex-direction: row;
 }

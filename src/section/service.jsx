@@ -6,18 +6,18 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 function Service() {
-  AOS.init();
+  // AOS.init();
   return (
     <>
-      <section className="services ">
-        <div className="container">
-          <div className="card_holder p-4 flex-column flex-md-row">
+        <div className="container p-4">
+          <h2 className="display-4 mb-5">Our Services</h2>
+          <div className="card_holder  flex-column flex-md-row">
             {/* card-1 */}
             <div
               className="card "
               data-aos="fade-up"
               data-aos-duration="1500"
-              data-aos-anchor-placement="top-center"
+              data-aos-anchor-placement="bottom-right"
             >
               <div className="card_img ">
                 <img
@@ -40,7 +40,7 @@ function Service() {
               className="card "
               data-aos="fade-up"
               data-aos-duration="1500"
-              data-aos-anchor-placement="top-center"
+              data-aos-anchor-placement="bottom-right"
             >
               <div className="card_img">
                 <img
@@ -63,7 +63,7 @@ function Service() {
               className="card "
               data-aos="fade-up"
               data-aos-duration="1500"
-              data-aos-anchor-placement="top-center"
+              data-aos-anchor-placement="bottom-right"
             >
               <div className="card_img">
                 <img
@@ -76,14 +76,13 @@ function Service() {
               <div className="card-body">
                 <h5 className="card-title">Let's Talk</h5>
                 <p className="card-text">
-                  Contact us foer study abroad counselling , visa assistance and
+                  Contact us for study abroad counselling , visa assistance and
                   many more
                 </p>
               </div>
             </div>
           </div>
         </div>
-      </section>
     </>
   );
 }

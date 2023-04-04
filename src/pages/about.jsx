@@ -10,6 +10,8 @@ import ramesh from "../img/team/ramesh.jpg";
 import anish from "../img/team/anish.jpg";
 import binita from "../img/team/binita.jpg";
 
+
+
 const About = () => {
   const [number, setNumber] = useState(0);
 
@@ -37,7 +39,7 @@ const About = () => {
           style={{ height: "70vh" }}
           data-aos="fade"
           data-aos-duration="1000"
-          data-aos-anchor-placement="top-center"
+          data-aos-anchor-placement="center-right"
         >
           <img
             src={about}
@@ -79,7 +81,7 @@ const About = () => {
                   className="d-flex flex-column flex-md-row flex-md-row"
                   data-aos="fade-up-right"
                   data-aos-duration="1500"
-                  data-aos-anchor-placement="top-center"
+                  data-aos-anchor-placement="bottom"
                 >
                   <div
                     className="p-2"
@@ -109,7 +111,7 @@ const About = () => {
                   className="d-flex flex-row-reverse mt-5  align-self-end mb-5"
                   data-aos="fade-up-left"
                   data-aos-duration="1500"
-                  data-aos-anchor-placement="top-center"
+                  data-aos-anchor-placement="bottom"
                 >
                   <div
                     className="p-2"
@@ -145,7 +147,7 @@ const About = () => {
                 className="col-md-4"
                 data-aos="fade-down-right"
                 data-aos-duration="1500"
-                data-aos-anchor-placement="top-center"
+                data-aos-anchor-placement="bottom"
               >
                 <div className="team-member ">
                   <img
@@ -164,7 +166,7 @@ const About = () => {
                 className="col-md-4"
                 data-aos="fade-up"
                 data-aos-duration="1500"
-                data-aos-anchor-placement="top-center"
+                data-aos-anchor-placement="bottom"
               >
                 <div className="team-member">
                   <img
@@ -182,7 +184,7 @@ const About = () => {
                 className="col-md-4"
                 data-aos="fade-down-left"
                 data-aos-duration="1500"
-                data-aos-anchor-placement="top-center"
+                data-aos-anchor-placement="bottom"
               >
                 <div className="team-member">
                   <img
@@ -202,7 +204,7 @@ const About = () => {
                 className="col-md-4"
                 data-aos="fade-down-right"
                 data-aos-duration="1500"
-                data-aos-anchor-placement="top-center"
+                data-aos-anchor-placement="bottom"
               >
                 <div className="team-member">
                   <img
@@ -220,7 +222,7 @@ const About = () => {
                 className="col-md-4"
                 data-aos="fade-up"
                 data-aos-duration="1500"
-                data-aos-anchor-placement="top-center"
+                data-aos-anchor-placement="bottom"
               >
                 <div className="team-member">
                   <img

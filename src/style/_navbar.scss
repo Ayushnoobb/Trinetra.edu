@@ -1,4 +1,6 @@
-
+nav{
+  background-color: #b8fff2;
+}
 .nav{
   &_wrapper{
     width: 100%;
@@ -9,10 +11,12 @@
     align-items: center;
     transition-duration: 5s;
      background-color: #FFFfff;
+  background-color: #b8fff2;
+
   }
   &-left{
-    max-height: 60px;
-    max-width: 50px;
+    max-height: 90px;
+    max-width: 90px;
     width: 100%;
     object-fit: cover;
     object-position: center;

@@ -17,7 +17,6 @@ function Subject() {
   AOS.init();
   return (
     <>
-      <section className="subject">
         <div className="container">
           <div className="section_wrapper  p-4 ">
             <h5
@@ -133,7 +132,6 @@ function Subject() {
             </div>
           </div>
         </div>
-      </section>
     </>
   );
 }
