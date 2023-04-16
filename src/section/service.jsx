@@ -10,7 +10,7 @@ function Service() {
   return (
     <>
         <div className="container p-4">
-          <h2 className="display-4 mb-5">Our Services</h2>
+          <h4 className="display-4 mb-5"><span>Our Services</span></h4>
           <div className="card_holder  flex-column flex-md-row">
             {/* card-1 */}
             <div

@@ -22,7 +22,7 @@ function About() {
                 data-aos-anchor-placement="top-bottom"
               >
                 <h4 className="mbr-white  mbr-fonts-style align-left display-4  mb-3">
-                  About Consultancy
+                  <span>About Consultancy</span>
                 </h4>
                 <div
                   className="mbr-white mbr-section-text mbr-fonts-style align-left display-7 mt-5 "

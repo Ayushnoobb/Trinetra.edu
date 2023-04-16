@@ -80,24 +80,29 @@ function Home() {
   return (
     <div ref={component}>
       <div className="home_wrapper">
-        <div className="swiper_wrapper firstContainer">
-          <Heroswiper />
-          <div class="flex-grow-1 ms-4 ps-3">
-            <figure>
-              <blockquote class="blockquote mb-4">
-                <p>
-                  <i class="fas fa-quote-left fa-lg text-warning me-2"></i>
-                  <span class="font-italic">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Pariatur sint nesciunt ad itaque aperiam expedita officiis
-                    incidunt minus facere, molestias quisquam impedit inventore.
-                  </span>
-                </p>
-              </blockquote>
-              <figcaption class="blockquote-footer">
-                Miranda Smith in <cite title="Source Title">The Guardian</cite>
-              </figcaption>
-            </figure>
+        <div className="swiper_wrapper firstContainer bg-blue ">
+          <div className="">
+            <Heroswiper />
+            <div className="container">
+              <div className="flex-grow-1 mt-5 px-3">
+                <figure className="mt-4 mx-auto">
+                  <blockquote className="blockquote mb-3">
+                    <p>
+                      <i className="fas fa-quote-left fa-lg text-warning me-2"></i>
+                      <span className="font-italic text-center text-danger display-6">
+                        <span className="fs-1   d-inline-block me-2">"</span>
+                          Excellent mindset is built with excellent people
+                        <span className="fs-2  d-inline-block ms-2">"</span>
+                      </span>
+                    </p>
+                  </blockquote>
+                  <figcaption className="blockquote-footer ps-4 text-end mt-3">
+                      Trilochan Consultancy  
+                    <cite title="Source Title">&nbsp;Family</cite>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
           </div>
         </div>
         <div className="content" ref={slider}>
@@ -116,7 +121,7 @@ function Home() {
         </div>
         <section className="section_preparation w-100 ">
           <div className="section_wrapper container">
-            <h4 className="display-4">Preparation Classes</h4>
+            <h4 className="display-4"><span>Preparation Classes</span></h4>
             <div className="preparation-wrapper">
               {classes.map((classs) => {
                 return <Preparation item={classs} key={classs.id} />;

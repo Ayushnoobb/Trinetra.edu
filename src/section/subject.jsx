@@ -19,13 +19,13 @@ function Subject() {
     <>
         <div className="container">
           <div className="section_wrapper  p-4 ">
-            <h5
+            <h4
               className="display-4  mb-5 "
               data-aos="fade-up"
               data-aos-duration="1500"
             >
-              Popular Courses
-            </h5>
+              <span>Popular Courses</span>
+            </h4>
             <div className="subjects_wrapper">
               <div
                 className="subjects"

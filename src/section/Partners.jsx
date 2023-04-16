@@ -20,7 +20,7 @@ const Partners = () => {
         <div className="section_wrapper p-4 container">
           <div className="partners_wrapper w-100">
             <h4 className="display-4  mt-5 mb-5">
-              Our Partners
+              <span>Our Partners</span>
             </h4>
             <Swiper
               effect={"flip"}
