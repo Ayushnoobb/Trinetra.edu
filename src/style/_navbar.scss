@@ -11,7 +11,7 @@ nav{
     align-items: center;
     transition-duration: 5s;
      background-color: #FFFfff;
-  background-color: #b8fff2;
+    background-color: #b8fff2;
 
   }
   &-left{
@@ -32,6 +32,10 @@ nav{
     align-items: center;
     justify-content: center;
   }
+  &-link{
+    font-weight: 400 !important;
+    font-size: 45px;
+  }
 }
  a:not(.nav-apply){
   color: #000000;
@@ -40,6 +44,7 @@ nav{
   text-decoration: none;
   transition: 0.5s;
   display: block;
+  font-weight: 400 !important;
   padding: 0 7px;
   // color: center;
   &:hover:not(.nav-apply , .custom-btn){
@@ -160,7 +165,7 @@ nav{
 }
 .active{
   position: relative;
-  background: linear-gradient(to right, rgb(255, 8, 68) 0%, rgb(255, 177, 153) 100%);
+  background: rgb(255, 8, 68);
   -webkit-text-stroke: #000000;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -223,8 +228,21 @@ h2{
 }
 
 @media (max-width:768px) {
+  .nav_wrapper{
+    padding: 10px 10px;
+  }
   .heading{
     font-size: 18px !important;
+  }
+  a:not(.nav-apply){
+    font-size: 12px;
+  }
+  .nav-lefter > .heading {
+    font-size:16px !important ;
+  }
+  .nav-lft-wrapper{
+    width: 30%;
+    padding: 0 !important;
   }
 }
 

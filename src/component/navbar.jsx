@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../img/tinetra.png";
-// import head from "../img/headlogo.svg"
 import Button from "./button";
 
 const Navbar = () => {
@@ -46,7 +45,7 @@ const Navbar = () => {
                     className="nav-left img-fluid"
                   ></img>
                 </Link>
-                <h2 className="heading">Trinetra Educational Service</h2>
+                <h2 className="heading">Trilochan Educational Service</h2>
               </div>
               <div className="nav-right d-none d-md-flex">
                 <Link to={"/"} className={active===0 ? "nav-link active" : "nav-link"} onClick={()=>{setActive(0);}}>

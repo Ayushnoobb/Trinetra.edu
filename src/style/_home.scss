@@ -19,14 +19,36 @@ section{
     opacity: 0 !important;
   }
 }
+.home_wrapper .swiper-pagination{
+  bottom: 10px !important;
+  top: unset !important;
+}
+.home_wrapper .swiper-pagination-bullet.swiper-pagination-bullet-active{
+  background-color: rgb(255, 8, 68) ;
+}
+// .swiper-pagination-bullet{
+//   background-color: #b8fff2 !important;
+// }
 
 .swiper-img {
-  max-width: 100%;
-  height: auto;
+  // max-width: 70%;
+  width: 100%;
+  height: 80dvh;
+  object-fit: cover;
+  object-position: center;
 }
 .swiper_wrapper{
   height: 100vh;
 }
+
+@media (max-width:768px) {
+  .swiper-img{
+    height: 50dvh;
+
+  }
+}
+
+
 // Section Service
 .services{
   padding: 3rem 15px;
@@ -48,6 +70,7 @@ section{
 .card_holder{
   display: flex;
   flex-direction: row;
+  gap: 20px;
   justify-content: space-between;
   .card {
     width: calc((100% / 3) - 20px);
@@ -83,9 +106,13 @@ section{
 @media (max-width:768px) {
   .card_holder{
     flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+
   }
   .card{
     width: 100%;
+    align-self: center  ;
   }
 }
 
@@ -125,7 +152,7 @@ h5:not(.subject-title , .card-title)
       top: 0;
       left: 0;
       clip-path: polygon(0 0, 0% 100%, 100% 100%);
-      background-color: #ffffff;
+      background-color: #fff;
       width: 50%;
       height: 100%;
     }
@@ -197,6 +224,7 @@ h5:not(.subject-title , .card-title)
 }
 .opportunity-list {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   row-gap: 20px;
   justify-content: space-between;
@@ -229,7 +257,17 @@ h5:not(.subject-title , .card-title)
 }
 .figure-caption {
   margin-top: 10px;
-  color: rgb(255, 8, 68) !important;
+  font-size: 1rem !important;
+  color: rgb(0, 0, 0) !important;
+}
+
+@media (max-width:768px) {
+  .opportunity-list{
+    flex-direction: column;
+  }
+  .opportunity-country{
+    width: 100%;
+  }
 }
 // Section preparation
 .section_preparation{
@@ -283,6 +321,7 @@ h5:not(.subject-title , .card-title)
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
     padding: 30px 5px;
   }
 }
@@ -293,8 +332,21 @@ h5:not(.subject-title , .card-title)
 .preparation-img {
   max-width: 300px;
   height: 200px;
+  object-fit: contain;
+  object-position: center;
+  padding: 0 20px;
 }
 
+@media(max-width:768px){
+  .preparation-type{
+    flex-direction: column;
+    width: 100%;
+    padding: 15px 5px;
+  }
+  .preparation-left{
+    width: 100%;
+  }
+}
 .display-4 {
   position: relative;
   width: fit-content;
@@ -334,6 +386,7 @@ h5:not(.subject-title , .card-title)
   &_wrapper {
     padding: 0 15px;
     display: flex;
+    flex-direction: row;
     row-gap: 30px;
     flex-wrap: wrap;
     align-items: center;
@@ -366,6 +419,15 @@ h5:not(.subject-title , .card-title)
 .subjects_wrapper:hover{
   .subjects-icon:not(:hover){
     filter: blur(5px);
+  }
+}
+
+@media (max-width:768px) {
+  .subjects_wrapper{
+    flex-direction: column;
+  }
+  .subjects{
+    width: 100%;
   }
 }
 
@@ -458,5 +520,61 @@ h5:not(.subject-title , .card-title)
           }
         }
       }
+  }
+}
+
+.content{
+  width: 400vw;
+  display: flex;
+  flex-direction: row;
+}
+.w-md-50{
+  width: 50% ;
+}
+@media (max-width:768px){
+  .w-md-50{
+    width: 100%;
+  }
+  .address_wrapper{
+    height: unset;
+  }
+  .content{
+    width: fit-content !important;
+    max-width: fit-content !important;
+    height: fit-content !important;
+    min-height: fit-content !important;
+    flex-direction: column !important;
+  }
+  .pin-spacer{
+    width: fit-content !important;
+  }
+  .address_col{
+    flex-direction: column;
+    &:nth-of-type(1){
+      flex-direction: row;
+    }
+  }
+  .address_desc{
+    // flex-direction: column;
+
+    &:nth-of-type(1){
+      flex-direction: row !important;
+    }
+
+    p{
+      font-size: 10px;
+    }
+  }
+  .icon-col{
+    flex-direction: row !important;
+    width: 100% !important;
+  }
+  .address_row{
+    width: 100%;
+    max-width: unset;
+  }
+  .address_row > .address_desc > p{
+    margin-right: 0;
+    font-size: 12px;
   }
 }

@@ -18,6 +18,13 @@ $roboto: 'Roboto', serif;
 body{
   overflow-x: hidden;
   position: relative;
+  // background-color: #ffb8c5 !important;
+}
+footer{
+  background-color: #b8fff2 !important;
+}
+p{
+  font-weight: medium !important;
 }
 .img-fluid{
   max-width: 100%;
@@ -82,6 +89,11 @@ section:not(.address , .partners , .about-section ){
   justify-content: center;
   align-items: center;
 }
+@media (max-width : 768px) {
+  section:not(.address , .partners , .about-section ){
+    height: -webkit-fill-available;
+  }
+}
 .content{
   width: 400vw;
   display: flex;
@@ -108,4 +120,11 @@ h4{
     }
   }
 
+}
+
+@media (max-width : 768px){
+  .container{
+    min-width: 355px;
+    padding: 0 10px;
+  }
 }

@@ -16,21 +16,21 @@ function Address() {
             <div className="address_wrapper  d-flex w-100 justify-content-evenly flex-column-reverse  p-5">
               <div className="address_row ">
                 <div className="links  mt-3 px-4 d-flex">
-                  <Link to="/" className="fw-normal fs-6 ">
+                  <Link to="/" className="fw-normal fs-md-6 display-1">
                     <u>Home</u>
                   </Link>
-                  <Link to="/about" className="fw-normal fs-6 ">
+                  <Link to="/about" className="fw-normal fs-md-6 display-1">
                     <u>About Us</u>
                   </Link>
-                  <Link to="/faq" className="fw-normal fs-6 ">
+                  <Link to="/faq" className="fw-normal fs-md-6 display-1">
                     <u>FAQ</u>
                   </Link>
-                  <Link to="/contact" className="fw-normal fs-6 ">
+                  <Link to="/contact" className="fw-normal fs-md-6 display-1">
                     <u>Contact</u>
                   </Link>
                 </div>
               </div>
-              <div className="address_col mb-4">
+              <div className="address_col mb-md-4 mb-0">
                 <div className="address_row d-flex flex-column ">
                   <div className="d-flex gx-2 w-100">
                     <div className="address_icon mx-2">
@@ -66,7 +66,7 @@ function Address() {
               </div>
               <div className="w-100 d-flex flex-column align-items-center justify-content-center">
                 <h4 className="display-7   mb-0">Follow Us</h4>
-                <div className="address_col mt-4 w-50 mb-2">
+                <div className="address_col icon-col mt-4  mb-2 w-md-50">
                   <div className="address_row">
                     <div className="icon_div" name="facebook-logo">
                       <Link

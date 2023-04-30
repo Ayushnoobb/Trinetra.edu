@@ -50,31 +50,34 @@ function Home() {
   const slider = useRef();
 
   useEffect(() => {
-    let ctx = gsap.context(() => {
-      let panels = gsap.utils.toArray(".panel");
-      let pauseRatio = 0.001;
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: slider.current,
-          pin: true,
-          scrub: 1,
-          snap: 1 / (panels.length - 1),
-          end: () => "+=" + slider.current.offsetWidth,
-          // markers: true
-        },
-      });
-      tl.to(
-        panels,
-        {
-          xPercent: -100 * (panels.length - 1),
-          duration: 1,
-          ease: "none",
-        },
-        pauseRatio
-      );
-      tl.to({}, { duration: pauseRatio });
-    }, component);
-    return () => ctx.revert();
+    if (window.innerWidth >= 768) {
+      console.log(window.innerWidth)
+      let ctx = gsap.context(() => {
+        let panels = gsap.utils.toArray(".panel");
+        let pauseRatio = 0.001;
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: slider.current,
+            pin: true,
+            scrub: 1,
+            snap: 1 / (panels.length - 1),
+            end: () => "+=" + slider.current.offsetWidth,
+            // markers: true
+          },
+        });
+        tl.to(
+          panels,
+          {
+            xPercent: -100 * (panels.length - 1),
+            duration: 1,
+            ease: "none",
+          },
+          pauseRatio
+        );
+        tl.to({}, { duration: pauseRatio });
+      }, component);
+      return () => ctx.revert();
+    }
   });
 
   return (
@@ -91,13 +94,13 @@ function Home() {
                       <i className="fas fa-quote-left fa-lg text-warning me-2"></i>
                       <span className="font-italic text-center text-danger display-6">
                         <span className="fs-1   d-inline-block me-2">"</span>
-                          Excellent mindset is built with excellent people
+                        Excellent mindset is built with excellent people
                         <span className="fs-2  d-inline-block ms-2">"</span>
                       </span>
                     </p>
                   </blockquote>
-                  <figcaption className="blockquote-footer ps-4 text-end mt-3">
-                      Trilochan Consultancy  
+                  <figcaption className="blockquote-footer ps-4 text-end mt-3 fs-5">
+                    Trilochan Consultancy
                     <cite title="Source Title">&nbsp;Family</cite>
                   </figcaption>
                 </figure>
@@ -121,7 +124,9 @@ function Home() {
         </div>
         <section className="section_preparation w-100 ">
           <div className="section_wrapper container">
-            <h4 className="display-4"><span>Preparation Classes</span></h4>
+            <h4 className="display-4">
+              <span>Preparation Classes</span>
+            </h4>
             <div className="preparation-wrapper">
               {classes.map((classs) => {
                 return <Preparation item={classs} key={classs.id} />;

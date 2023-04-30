@@ -12,7 +12,7 @@ function Opportunity() {
   AOS.init();
   return (
     <>
-        <div className="container">
+        <div className="container justify-center h-100">
           <div className="media-container-row">
             <div className="title ">
               <h2

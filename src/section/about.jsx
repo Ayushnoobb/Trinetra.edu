@@ -13,9 +13,9 @@ function About() {
     <>
         <div className="wrap__about">
           <div className="container">
-            <div className="justify-content-between  d-flex flex-column flex-md-row  p-4">
+            <div className="justify-content-between  d-flex flex-column flex-md-row  p-0 p-md-4">
               <div
-                className="section-about-left mb-3 mb-md-0"
+                className="section-about-left mt-md-3 mb-md-0"
                 data-aos="fade-up"
                 data-aos-duration="1500"
                 data-aos-delay="300"
@@ -58,7 +58,7 @@ function About() {
                 data-aos-duration="1500"
                 data-aos-delay="300"
               >
-                <div className="mbr-figure section-about-holder">
+                <div className="mbr-figure section-about-holder mt-md-0 mt-4">
                   <img
                     src={about}
                     alt="About Consultancy"
